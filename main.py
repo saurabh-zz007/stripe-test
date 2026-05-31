@@ -36,7 +36,7 @@ async def create_payment_link(request: PaymentRequest):
             
             # These URLs tell Stripe where to redirect the user after the payment finishes.
             # You should configure Deep Links in Flutter to catch these custom schemes.
-            success_url='https://www.pitchmatter.com/',
+            success_url='zynk://payment/success?session_id={CHECKOUT_SESSION_ID}',
             cancel_url='zynk://payment-cancel',
         )
         
